@@ -20,7 +20,7 @@ object WatermarkText
     data("Fonts")
       .flatMap {
         case Prim.Array(refs) =>
-          Some(Prim.Dict(data.data.updated("Contents", Prim.Array(Prim.refNum(fontNumber) :: refs))))
+          Some(Prim.Dict(data.data.updated("Fonts", Prim.Array(Prim.refNum(fontNumber) :: refs))))
         case _ => None
       }
       .getOrElse(data)

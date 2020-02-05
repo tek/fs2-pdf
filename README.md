@@ -85,5 +85,11 @@ val result: IO[ValidatedNel[String, Unit]] = raw.through(StreamParser.validate(L
 ops/sbt test
 ```
 
+# License
+
+Copyright 2020 SpringerNature
+
+**fs2-pdf** is licensed under the Apache License 2.0
+
 [fs2]: https://fs2.io
 [scodec]: https://scodec.org

@@ -1,6 +1,6 @@
 team: sprcom
 pipeline: fs2-pdf
-trigger:
+triggers:
   - type: git
     branch: bootstrap
 tasks:

@@ -28,8 +28,8 @@ object WatermarkText
   def addFontIfDirectResources(fontNumber: Long)(data: Prim.Dict): Prim.Dict =
     data("Resources")
       .flatMap {
-        case Prim.Dict(_) =>
-          Prim.Dict.deepMerge(fontResources(fontNumber))(data).toOption
+        case res @ Prim.Dict(_) =>
+          Some(Prim.Dict(data.data.updated("Resources", addFontIfDirect(fontNumber)(res))))
         case _ => None
       }
       .getOrElse(data)

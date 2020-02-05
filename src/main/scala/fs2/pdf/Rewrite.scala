@@ -7,10 +7,7 @@ import cats.implicits._
 import fs2.{Pipe, Pull, Stream}
 import scodec.bits.ByteVector
 
-case class RewriteState[A](
-  state: A,
-  trailers: List[Trailer],
-)
+case class RewriteState[A](state: A, trailers: List[Trailer])
 
 object RewriteState
 {

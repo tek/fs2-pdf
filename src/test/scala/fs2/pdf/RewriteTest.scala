@@ -8,7 +8,7 @@ class RewriteTest
 extends Specification
 {
   "rewrite pdf" >>
-  ProcessJarPdf("books/micro", "books/test-out")(WatermarkPdf.rewrite).as(1 must_== 1).unsafeRunSync
+  ProcessJarPdf("books/steuer", "books/test-out")(WatermarkPdf.rewrite).as(1 must_== 1).unsafeRunSync
 
   def dois: List[String] =
     List(
